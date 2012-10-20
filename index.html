@@ -23,41 +23,90 @@
         <h1>Tim Rogers</h1>
         <p>A 19 year old developer, startup guy and coffee addict from London, UK.</p>
         <p><img src="images/me.jpg" alt="Tim Rogers" class="profile" /></p>
-        <p class="view"><a href="https://github.com/timrogers">GitHub Profile</a></p>
-        <p class="view"><a href="http://www.tim-rogers.co.uk">Blog</a></p>
-        <p class="view"><a href="https://github.com/timrogers">Twitter</a></p>
+        <p class="view"><i class="icon-github icon-large"></i><a href="https://github.com/timrogers">GitHub Profile</a></p>
+        <p class="view"><i class="icon-book icon-large"></i><a href="http://www.tim-rogers.co.uk">Blog</a></p>
+        <p class="view"><i class="icon-twitter icon-large"></i><a href="https://twitter.com/timrogers">@timROGERS</a></p>
+        <p class="view"><i class="icon-facebook icon-large"></i><a href="https://facebook.com/timrog">Facebook</a></p>
+        <p class="view"><i class="icon-facebook icon-large"></i><a href="http://uk.linkedin.com/in/TimRogers1">LinkedIn</a></p>
 
       </header>
       <section>
-        <h3>Welcome to GitHub Pages.</h3>
+        <h2>Hi, I'm Tim Rogers.</h2>
 
-<p>This automatic page generator is the easiest way to create beautiful pages for all of your projects. Author your page content here using GitHub Flavored Markdown, select a template crafted by a designer, and publish. After your page is generated, you can check out the new branch:</p>
+<p>I'm a 19 year old developer, all-round geek and coffee addict from London, UK. At the moment I'm working for <a href="https://gocardless.com">GoCardless</a> (@GoCardless), a UK payments startup where we're working hard to fix
+  online payments forever.</p>
+  
+  <p>I make bits and bobs every now and then, usually web-based projects working with Ruby and Javascript. I'll post
+    them all to my <a href="https://github.com/timrogers">GitHub profile</a> and the at least mildly notable ones will
+    be documented on this page.<p>
 
-<pre><code>$ cd your_repo_root/repo_name
-$ git fetch origin
-$ git checkout gh-pages
-</code></pre>
+<h2>Projects</h2>
 
-<p>If you're using the GitHub for Mac, simply sync your repository and you'll see the new branch.</p>
+<h3>UCAS screen scraper</h3>
 
-<h3>Designer Templates</h3>
+<p>In the UK, we make university applications via a system called UCAS. It has no APIs and generally the whole experience
+  with staying up to date with your application isn't too great. So I decided to build a solution comprised of two parts:
+  
+  <ul>
+    <li><strong><a href="https://github.com/timrogers/ucas">ucas</a></strong>, a Ruby script to be run periodically (every
+      minute, for me!) which screen scrapes from the UCAS Track system using Mechanize and saves to a Redis database, providing
+      SMS and email notifications.</li>
+      <li><strong><a href="https://github.com/timrogers/ucas-frontend">ucas-frontend</a></strong>, a Sinatra app which provides
+        a pretty interface to the Redis backend meaning that <em>anyone</em> can see my application status. It's running live at
+        <a href="http://ucas.timrog.net">http://ucas.timrog.net</a>.</li>
+      </ul>
+      
+      <p>All of the code is reusable for the project, and I'd love to see people contribute. For a bit more information on how
+        things work, check out my blog post <a href="http://www.tim-rogers.co.uk/posts/ucas-universities-and-open-data">
+          UCAS, universities and open data</a>.</p>
 
-<p>We've crafted some handsome templates for you to use. Go ahead and continue to layouts to browse through them. You can easily go back to edit your page before publishing. After publishing your page, you can revisit the page generator and switch to another theme. Your Page content will be preserved if it remained markdown format.</p>
+<h3>Unistats API library <em>(for Ruby)</em></h3>
 
-<h3>Rather Drive Stick?</h3>
+<p>The UK government organisation <a href="http://hefce.ac.uk">Higher Education Funding Council for England</a> provides a site
+  called <a href="http://www.unistats.com">Unistats</a> with lots of information about university courses in the UK. This even has
+  a free-to-use API.</p>
+  
+  <p> The organisation of the data is a bit odd, but I nonetheless decided to build an API library for my own use
+  - you can find the details <a href="https://github.com/timrogers/unistats">here</a>, and install it really quickly by running
+  <code>gem install unistats</code>.</p>
+  
+  <h3>Impatient <em>(a Ruby gem)</em></h3>
+  
+  <p>I run quite a few projects on Heroku, and I get tired of the wait after deploy for them to be ready to go. It's really
+    short, but I get annoyed every time I have to run <code>heroku ps</code> after deploying whilst I wait to check that
+    everything has worked.</p>
+    
+    <p>With my Ruby gem "impatient", this is no longer necessary. Basically, it lets you deploy your Heroku project simply by
+      running <code>imp</code> - this runs the <code>git push heroku master</code> command and then repeatedly executes <code>
+        heroku ps</code> until the app is up and ready to go. It'll then automatically open the site for you. Neat, huh?</p>
+        
+        <p>You can download the source of this from my <a href="https://github.com/timrogers/impatient">GitHub repository</a>,
+          or simply run <code>gem install impatient</code>.</p>
+          
+<h3>Windows Phone application samples</h3>
 
-<p>If you prefer to not use the automatic generator, push a branch named <code>gh-pages</code> to your repository to create a page manually. In addition to supporting regular HTML content, GitHub Pages support Jekyll, a simple, blog aware static site generator written by our own Tom Preston-Werner. Jekyll makes it easy to create site-wide headers and footers without having to copy them across every page. It also offers intelligent blog support and other advanced templating features.</p>
+<p>As part of a number of competitions that Microsoft UK ran early in 2012 with prizes like Xbox 360s and Windows Phones, I built
+  some really simple (but pretty cool!) Windows Phone apps and open sourced them. People are welcome to do as they please with these,
+  and they serve as a great starting point for your own application, whether there's a competition to be won or not.</p>
+  
+  <p>There are two sample apps available:</p>
+  <ul>
+    <li><strong><a href="https://github.com/timrogers/joker-soundboard-wp7">joker-soundboard-wp7</a></strong>, a soundboard featuring
+      sounds from The Joker in awesome film The Dark Knight. You can adapt this to make any soundboard you wish, and it even includes
+      the ability to set the sounds as a ringtone. This has been <em>fairly</em> commercially successful, as it happens.</li>
+      <li>strong><a href="https://github.com/timrogers/business-card-wp7">business-card-wp7</a></strong>, is a really simple application
+        which basically acts a business card for your phone, including an <em>oh-so-pointless</em> QR code (but everyone loves them...).
+        It's basically a picture and contact details. It's a bit pointless, but it still serves as an interesting demo.</li>
+      </ul>
 
-<h3>Authors and Contributors</h3>
 
-<p>You can <a href="https://github.com/blog/821" class="user-mention">@mention</a> a GitHub username to generate a link to their profile. The resulting <code>&lt;a&gt;</code> element will link to the contributor's GitHub Profile. For example: In 2007, Chris Wanstrath (<a href="https://github.com/defunkt" class="user-mention">@defunkt</a>), PJ Hyett (<a href="https://github.com/pjhyett" class="user-mention">@pjhyett</a>), and Tom Preston-Werner (<a href="https://github.com/mojombo" class="user-mention">@mojombo</a>) founded GitHub.</p>
+<h2>Contact Tim Rogers</h2>
 
-<h3>Support or Contact</h3>
-
-<p>Having trouble with Pages? Check out the documentation at <a href="http://help.github.com/pages">http://help.github.com/pages</a> or contact <a href="mailto:support@github.com">support@github.com</a> and we’ll help you sort it out.</p>
+<p>If you'd like to get in touch with my about my open source work, or anything else for that matter, just drop me an
+  email at <a href="mailto:tim@tim-rogers.co.uk">tim@tim-rogers.co.uk</a> or simply tweet <a href="https://twitter.com/timrogers">
+    @timROGERS</a></p>
       </section>
       <footer>
-        <p><small>Hosted on GitHub Pages &mdash; Theme by <a href="https://github.com/orderedlist">orderedlist</a></small></p>
       </footer>
     </div>
     <script src="javascripts/scale.fix.js"></script>
