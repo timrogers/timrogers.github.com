@@ -44,6 +44,14 @@
 
 <h2>Projects</h2>
 
+<h3>Lloyds TSB screen scraper</h3>
+
+<p>I bank with Lloyds TSB - I have my current account and credit card with them. Like most online banking services though, they're not to up-to-date on APIs and the like. After looking around online, I found that there were a couple of scripts that people had built, but I didn't have much luck with them myself. So I decided to build my own screen scraper.</p>
+
+<p>Once again using Ruby with Mechanize, much like my UCAS one (below), I've built a script which can login to Lloyds TSB with your username, password and memorable word. There were some particularly interesting challenges, especially with the memorable word part, since the login pages ask for particular characters which change each time.</p>
+
+<p>When run, the script returns a list of your accounts and the recent transactions for them. If you want to give it a go, you can download the script <a href="https://github.com/timrogers/lloydstsb">here</a>.</p>
+
 <h3>UCAS screen scraper</h3>
 
 <p>In the UK, we make university applications via a system called UCAS. It has no APIs and generally the whole experience
